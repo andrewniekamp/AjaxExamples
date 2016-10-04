@@ -15,5 +15,10 @@ namespace MVCWebApp.Controllers
         {
             return View();
         }
+
+        public IActionResult HelloAjax()
+        {
+            return Content("This message is hard-coded into the controller!.", "text/plain");
+        }
     }
 }
