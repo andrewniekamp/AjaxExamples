@@ -20,5 +20,9 @@ namespace MVCWebApp.Controllers
         {
             return Content("This message is hard-coded into the controller!.", "text/plain");
         }
+        public IActionResult Sum(int firstNumber, int secondNumber)
+        {
+            return Content((firstNumber + secondNumber).ToString(), "text/plain");
+        }
     }
 }

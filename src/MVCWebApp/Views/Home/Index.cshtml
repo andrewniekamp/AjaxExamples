@@ -21,7 +21,9 @@
         <div id="result1"></div>
     </div>
     <div class="col-sm-4">
-
+        <h2>Using Parameters</h2>
+        <h4 class="sum">This will output the sum of 1 and 2.</h4>
+        <div id="result2"></div>
     </div>
     <div class="col-sm-4">
 
@@ -47,6 +49,18 @@
                 }
             });
         });
+
+        $('.sum').click(function () {
+            $.ajax({
+                type: 'GET',
+                data: { firstNumber: 1, secondNumber: 2 },
+                url: '@Url.Action("Sum")',
+                success: function (result) {
+                    $('#result2').html(result);
+                }
+            });
+        });
+
     });
     </script>
 </body>
