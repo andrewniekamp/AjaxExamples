@@ -31,13 +31,9 @@
         <div id="result3"></div>
     </div>
     <div class="col-sm-4">
-
-    </div>
-    <div class="col-sm-4">
-
-    </div>
-    <div class="col-sm-4">
-
+        <h2>Displaying a view</h2>
+        <h4 class="display-view">Display view</h4>
+        <div id="result4"></div>
     </div>
 
     <script type="text/javascript">
@@ -78,6 +74,16 @@
             });
         });
 
+        $('.display-view').click(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'html',
+                url: '@Url.Action("DisplayViewWithAjax")',
+                success: function (result) {
+                    $('#result4').html(result);
+                }
+            });
+        });
     });
     </script>
 </body>

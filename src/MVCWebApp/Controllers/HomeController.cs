@@ -30,5 +30,9 @@ namespace MVCWebApp.Controllers
             Destination destination = new Destination("Tokyo", 1);
             return Json(destination);
         }
+        public IActionResult DisplayViewWithAjax()
+        {
+            return View();
+        }
     }
 }
