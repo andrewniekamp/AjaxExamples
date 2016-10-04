@@ -26,7 +26,9 @@
         <div id="result2"></div>
     </div>
     <div class="col-sm-4">
-
+        <h2>Using JSON to display an object</h2>
+        <h4 class="display-object">Display an object here</h4>
+        <div id="result3"></div>
     </div>
     <div class="col-sm-4">
 
@@ -57,6 +59,21 @@
                 url: '@Url.Action("Sum")',
                 success: function (result) {
                     $('#result2').html(result);
+                }
+            });
+        });
+
+        $('.display-object').click(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                contentType: 'application/json',
+                url: '@Url.Action("DisplayObject")',
+                success: function (result) {
+                    var resultString =
+                        'Id: ' + result.destinationId +
+                        '<br>Name: ' + result.name;
+                    $('#result3').html(resultString);
                 }
             });
         });

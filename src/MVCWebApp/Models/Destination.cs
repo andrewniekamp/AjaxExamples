@@ -13,5 +13,11 @@ namespace MVCWebApp.Models
         [Key]
         public int DestinationId { get; set; }
         public string Name { get; set; }
+
+        public Destination(string name, int id = 0)
+        {
+            Name = name;
+            DestinationId = id;
+        }
     }
 }
