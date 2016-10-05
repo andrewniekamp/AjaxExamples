@@ -8,9 +8,10 @@ using MVCWebApp.Models;
 namespace MVCWebApp.Migrations
 {
     [DbContext(typeof(MVCWebAppDbContext))]
-    partial class MVCWebAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20161005165754_AddDestProps")]
+    partial class AddDestProps
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")

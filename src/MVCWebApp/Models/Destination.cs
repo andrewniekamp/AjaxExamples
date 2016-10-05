@@ -12,12 +12,16 @@ namespace MVCWebApp.Models
     {
         [Key]
         public int DestinationId { get; set; }
-        public string Name { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
 
-        public Destination(string name, int id = 0)
+        public Destination(string city, string country, int id = 0)
         {
-            Name = name;
+            City = city;
+            Country = country;
             DestinationId = id;
         }
+
+        public Destination() { }
     }
 }

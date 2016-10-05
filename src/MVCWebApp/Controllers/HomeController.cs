@@ -27,7 +27,7 @@ namespace MVCWebApp.Controllers
         }
         public IActionResult DisplayObject()
         {
-            Destination destination = new Destination("Tokyo", 1);
+            Destination destination = new Destination("Tokyo", "Japan", 1);
             return Json(destination);
         }
         public IActionResult DisplayViewWithAjax()
